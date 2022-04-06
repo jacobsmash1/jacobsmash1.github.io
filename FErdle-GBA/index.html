@@ -288,9 +288,6 @@
 
 				let delay = 250 * i
 				if (incwin == false) {
-					delay = 0
-				}
-				setTimeout(()=> {
 					box.style.backgroundImage = "url(" + letterColor + ")"
 					if (i == 0) {
 						box.textContent = "" + guessChar.game
@@ -313,7 +310,32 @@
 						let img = box.children[0]
 						img.src = "Affinity/" + guessChar.affinity + ".png"
 					}
-				}, delay)
+				} else
+					setTimeout(()=> {
+						box.style.backgroundImage = "url(" + letterColor + ")"
+						if (i == 0) {
+							box.textContent = "" + guessChar.game
+						}
+						if (i == 1) {
+							box.textContent = "" + guessChar.chapter
+						}
+						if (i == 2) {
+							let tile = document.getElementById(guessChar.class)
+							tile.style.backgroundImage = "url(" + letterColor + ")"
+							let img = box.children[0]
+							img.src = "Class/" + guessChar.class + ".png"
+						}
+						if (i == 3) {
+							box.textContent = "" + guessChar.level
+						}
+						if (i == 4) {
+							let tile = document.getElementById(guessChar.affinity)
+							tile.style.backgroundImage = "url(" + letterColor + ")"
+							let img = box.children[0]
+							img.src = "Affinity/" + guessChar.affinity + ".png"
+						}
+					}, delay)
+				}
 			}
 
 			if (guessChar.name === rightChar.name) {
