@@ -16,6 +16,43 @@ body {
   transform: translateX(-50%);
 }
 
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-search {
+  float: none;
+  display: none;
+  position: absolute;
+  background-color: #141414;
+  min-width: 177px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  text-align: left;
+}
+
+.dropdown-search a {
+  float: none;
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-search button {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.dropdown-search a:hover {background-color: gray;}
+
 .dropdown-content {
   float: center;
   position: absolute;
