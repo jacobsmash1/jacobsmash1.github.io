@@ -288,8 +288,8 @@
 			}
 
 			if (guessChar.name === rightChar.name) {
-				let wins = getCookie(wins)
-				let streak = getCookie(streak)
+				let wins = getCookie('wins')
+				let streak = getCookie('streak')
 				if (incwin == true) {
 					if (wins == "") {
 						setCookie("wins","1",365)
@@ -316,7 +316,7 @@
 				guessesRemaining -= 1;
 
 				if (guessesRemaining === 0) {
-					let losses = getCookie(losses)
+					let losses = getCookie('losses')
 					if (incwin == true) {
 						if (losses == "") {
 							setCookie("losses","1",365)
