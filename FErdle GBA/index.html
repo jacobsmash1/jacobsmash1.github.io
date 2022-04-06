@@ -11,21 +11,10 @@
 </head>
 <body>
     <h1> FErdle GBA </h1>
-    
+	
     <div id="game-board">
 		<div class="typing-row">
-			<div class="letter-box">_</div>
-			<div class="letter-box"></div>
-			<div class="letter-box"></div>
-			<div class="letter-box"></div>
-			<div class="letter-box"></div>
-			<div class="letter-box"></div>
-			<div class="letter-box"></div>
-			<div class="letter-box"></div>
-			<div class="letter-box"></div>
-			<div class="letter-box"></div>
-			<div class="letter-box"></div>
-			<div class="letter-box"></div>
+			<input type="text" placeholder="Guess here..." id="typeBox">
 		</div>
 		<div id="knowledge-cont">
 			<div id="names">
@@ -36,7 +25,21 @@
 				<div class="knowledge-div" style="background-image: url(Square/gray.png);" id="affinities"><img src="Names/affinity.png"></img></div>
 			</div>
 		</div>
+    
+		<div class="dropdown-content" id="endscreen">
+			<button style="float:right; background-color:#141414; border: none;" onclick="closeEndscreen()"><img src="Square/x.png"></img></button>
+			<a style="height:20px;"></a>
+			<a id="winOrLose">You won!</a>
+			<a id="answer">The character was Niime.</a>
+			<a id="stats">Wins: 14 | Losses: 1 | Streak: 10</a>
+			<a><button onclick="share()">Share</button></a>
+		</div>
     </div>
+	<div class="flex">
+		<div class="dropdown-content" id="popup">
+			<a id="popupText">Copied to clipboard.</a>
+		</div>
+	</div>
 	<div id="knowledge-cont">
         <div id="unpromoted">
 			<div class="knowledge-div" id="Archer"><img src="Class/Archer.png"></img></div>
@@ -96,10 +99,63 @@
             <div class="knowledge-div" style="background-image: url(Square/gray.png);" id="Thunder"><img src="Affinity/Thunder.png"></img></div>
         </div>
     </div>
-	
-	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+<!-- 	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script> -->
 	<script>
+		function closeEndscreen() {
+			let endscreen = document.getElementById("endscreen")
+			endscreen.style.display = "none";
+		}
+		function share() {
+			let popup = document.getElementById("popup")
+			let popupText = document.getElementById("popupText")
+			popupText.textContent = "Copied to clipboard."
+			popup.style.display = "block";
+			
+			let grid = ""
+			let guesses = 0
+			for (var i = 0; i < NUMBER_OF_GUESSES; i++) {
+				if (boardColors[i][0] == "")
+					break;
+				guesses ++
+				for (var j = 0; j < 5; j++) {
+					if (boardColors[i][j] == "g")
+						grid = grid + "🟩";
+					if (boardColors[i][j] == "y")
+						grid = grid + "🟨";
+					if (boardColors[i][j] == "r")
+						grid = grid + "🟥";
+				}
+				grid = grid + "\n"
+			}
+			
+			navigator.clipboard.writeText("FErdle GBA #" + 1 + " " + guesses + "/" + NUMBER_OF_GUESSES + "\n" + grid + "https://jacobsmash1.github.io/FErdle-GBA")
+			setTimeout(()=> {
+				let popup = document.getElementById("popup")
+				popup.style.display = "none";
+			},2000)
+		}
+		
+		function mulberry32(a) {
+			return function() {
+				var t = a += 0x6D2B79F5;
+				t = Math.imul(t ^ t >>> 15, t | 1);
+				t ^= t + Math.imul(t ^ t >>> 7, t | 61);
+				return ((t ^ t >>> 14) >>> 0) / 4294967296;
+			}
+		}
+		
+		function xmur3(str) {
+			for(var i = 0, h = 1779033703 ^ str.length; i < str.length; i++) {
+				h = Math.imul(h ^ str.charCodeAt(i), 3432918353);
+				h = h << 13 | h >>> 19;
+			} return function() {
+				h = Math.imul(h ^ (h >>> 16), 2246822507);
+				h = Math.imul(h ^ (h >>> 13), 3266489909);
+				return (h ^= h >>> 16) >>> 0;
+			}
+		}
+	
 		function csv_To_Array(str, delimiter = ",") {
 			const header_cols = str.slice(0, str.indexOf("\n")).split(delimiter);
 			const row_data = str.slice(str.indexOf("\n") + 1).split("\n");
@@ -112,26 +168,22 @@
 				return el;
 			});
 
-			// return the array
 			return arr;
-			
-			//credit: https://www.delftstack.com/howto/javascript/csv-to-array-in-javascript/
 		}
 		const CHARS = csv_To_Array("name,game,chapter,level,class,affinity\nRoy,6,1,1,Lord,Fire\nMarcus (6),6,1,1,Paladin,Ice\nAlen,6,1,1,Cavalier,Fire\nLance,6,1,1,Cavalier,Anima\nWolt,6,1,1,Archer,Ice\nBors,6,1,1,Knight,Wind\nMerlinus (6),6,2,1,Transporter,Dark\nElen,6,2,2,Priest,Wind\nDieck,6,2,5,Mercenary,Thunder\nWade,6,2,2,Fighter,Fire\nLot,6,2,3,Fighter,Anima\nShanna,6,2,1,Pegasus Knight,Wind\nChad,6,3,1,Thief,Thunder\nLugh,6,3,1,Mage,Fire\nClarine,6,4,1,Troubador,Thunder\nRutger,6,4,4,Myrmidon,Dark\nSaul,6,6,5,Priest,Ice\nDorothy,6,6,3,Archer,Fire\nSue,6,6,1,Nomad,Wind\nZelot,6,7,1,Paladin,Dark\nTrec,6,7,4,Cavalier,Wind\nNoah,6,7,7,Cavalier,Anima\nAstolfo,6,8,10,Thief,Dark\nLilina,6,8,1,Mage,Light\nBarthe,6,8,9,Knight,Ice\nOgier,6,8,3,Mercenary,Wind\nGwendolyn,6,8,1,Knight,Fire\nFir,6,9,1,Myrmidon,Fire\nSin,6,9,5,Nomad,Ice\nGeese,6,10,10,Pirate,Fire\nGonzalez,6,10,5,Brigand,Thunder\nKlein,6,10,1,Sniper,Ice\nThea,6,10,8,Pegasus Knight,Ice\nLarum,6,11,1,Dancer,Thunder\nElffin,6,11,1,Dancer,Light\nEchidna,6,11,1,Hero,Ice\nBartre (6),6,11,2,Warrior,Thunder\nRaigh,6,12,12,Shaman,Ice\nCath,6,12,5,Thief,Anima\nMelady,6,13,10,Wyvern Knight,Dark\nPerceval,6,13,5,Paladin,Dark\nCecilia,6,14,1,Valkyrie,Anima\nSophia,6,14,1,Shaman,Dark\nIgrene,6,15,1,Sniper,Ice\nGarret,6,15,1,Berserker,Wind\nFae,6,16,1,Manakete,Light\nHugh,6,16,15,Mage,Wind\nZeiss,6,16,7,Wyvern Knight,Thunder\nDouglas,6,17,8,General,Thunder\nNiime,6,19,18,Druid,Anima\nJuno,6,20,9,Falcoknight,Light\nDayan,6,20,12,Nomadic Trooper,Anima\nYoder,6,21,20,Bishop,Light\nKarel (6),6,23,19,Swordmaster,Light\nHector,7,11,1,Lord,Thunder\nMatthew,7,11,2,Thief,Wind\nOswin,7,12,9,Knight,Anima\nSerra,7,12,1,Priest,Thunder\nEliwood,7,12,1,Lord,Anima\nMarcus (7),7,12,1,Paladin,Ice\nLowen,7,12,2,Cavalier,Fire\nRebecca,7,12,1,Archer,Fire\nDorcas,7,12,3,Fighter,Fire\nBartre (7),7,12,2,Fighter,Thunder\nGuy,7,13,3,Myrmidon,Fire\nMerlinus (7),7,14,5,Transporter,Dark\nErk,7,14,1,Mage,Thunder\nPriscilla,7,14,3,Troubador,Wind\nLyn,7,16,4,Lord,Wind\nSain,7,16,4,Cavalier,Wind\nKent,7,16,5,Cavalier,Anima\nWil,7,16,4,Archer,Wind\nFlorina,7,16,3,Pegasus Knight,Light\nRaven,7,17,5,Mercenary,Ice\nLucius,7,17,3,Monk,Light\nCanas,7,18,8,Shaman,Anima\nDart,7,19,8,Pirate,Fire\nFiora,7,19,7,Pegasus Knight,Wind\nLegault,7,20,12,Thief,Ice\nNinian,7,21,1,Dancer,Ice\nIsadora,7,22,1,Paladin,Dark\nHeath,7,22,7,Wyvern Knight,Thunder\nRath,7,22,9,Nomad,Dark\nHawkeye,7,23,4,Berserker,Wind\nGeitz,7,24,3,Warrior,Thunder\nWallace,7,24,1,General,Thunder\nFarina,7,25,12,Pegasus Knight,Anima\nPent,7,26,6,Sage,Ice\nLouise,7,26,4,Sniper,Light\nKarel (7),7,27,8,Swordmaster,Light\nHarken,7,27,8,Hero,Fire\nNino,7,28,5,Mage,Fire\nJaffar,7,29,13,Assassin,Ice\nVaida,7,29,9,Wyvern Lord,Fire\nNils,7,30,1,Dancer,Ice\nKarla,7,32,5,Swordmaster,Dark\nRenault,7,32,16,Bishop,Anima\nAthos,7,33,20,Archsage,Anima\nEirika,8,1,1,Lord,Light\nSeth,8,1,1,Paladin,Anima\nFranz,8,1,1,Cavalier,Light\nGilliam,8,1,4,Knight,Thunder\nVanessa,8,2,1,Pegasus Knight,Anima\nMoulder,8,2,3,Priest,Anima\nRoss,8,2,1,Journeyman,Fire\nGarcia,8,2,4,Fighter,Fire\nNeimi,8,3,1,Archer,Fire\nColm,8,3,2,Thief,Light\nArtur,8,4,2,Monk,Ice\nLute,8,4,1,Mage,Anima\nNatasha,8,5,1,Priest,Ice\nJoshua,8,5,5,Myrmidon,Wind\nEphraim,8,15,10,Lord,Fire\nForde,8,8,6,Cavalier,Wind\nKyle,8,8,5,Cavalier,Ice\nTana,8,9,4,Pegasus Knight,Wind\nAmelia,8,9,1,Recruit,Thunder\nInnes,8,10,1,Sniper,Ice\nGerik,8,10,10,Mercenary,Thunder\nTethys,8,10,1,Dancer,Fire\nMarisa,8,10,5,Myrmidon,Ice\nL'Arachel,8,11,3,Troubador,Light\nDozla,8,11,1,Berserker,Thunder\nSaleh,8,12,1,Sage,Wind\nEwan,8,12,1,Pupil,Light\nCormag,8,13,11,Wyvern Knight,Fire\nRennac,8,14,1,Rogue,Dark\nDuessel,8,15,10,Great Knight,Anima\nKnoll,8,15,10,Shaman,Dark\nMyrrh,8,16,1,Manakete,Wind\nSyrene,8,17,1,Falcoknight,Thunder")
-		/*const CHARS = [
-			{name:"Roy",class:"Lord",affinity:"Fire",level:1,game:6,chapter:1}
-		]*/
+
 		var CHARNAMES = []
 		for (let i = 0; i < CHARS.length; i++) {
 			CHARNAMES[i] = CHARS[i].name.toLowerCase()
 		}
 
-		const NUMBER_OF_GUESSES = 6;
+		const NUMBER_OF_GUESSES = 7;
 		let guessesRemaining = NUMBER_OF_GUESSES;
-		let currentGuess = [];
-		let nextLetter = 0;
 		
-		let rightCharIndex = Math.floor(Math.random() * CHARS.length)
+		var seed = xmur3('test')
+		var rand = mulberry32(seed())
+		
+		let rightCharIndex = Math.floor(rand() * CHARS.length)
 		let rightChar = CHARS[rightCharIndex]
 
 		function initBoard() {
@@ -158,133 +210,91 @@
 		}
 
 		initBoard()
+		
+		var boardColors = [
+			["","","","",""],
+			["","","","",""],
+			["","","","",""],
+			["","","","",""],
+			["","","","",""],
+			["","","","",""],
+			["","","","",""]
+		]
 
-
-		document.addEventListener("keyup", (e) => {
+		function checkGuess (textbox) {
+			let row = document.getElementsByClassName("guess-row")[NUMBER_OF_GUESSES - guessesRemaining]
+			guessString = textbox.value
 
 			if (guessesRemaining === 0) {
 				return
 			}
-
-			let pressedKey = String(e.key)
-			if (pressedKey === "Backspace" && nextLetter !== 0) {
-				deleteLetter()
-				return
-			}
-
-			if (pressedKey === "Enter") {
-				checkGuess()
-				return
-			}
-
-			let found = pressedKey.match(/[a-z()67' ]/gi)
-			if (!found || pressedKey.length > 1) {
-				return
-			} else {
-				insertLetter(pressedKey)
-			}
-		})
-
-		function insertLetter (pressedKey) {
-			if (nextLetter === 12) {
-				return
-			}
-			pressedKey = pressedKey.toLowerCase()
-
-			let row = document.getElementsByClassName("typing-row")[0]
-			let box = row.children[nextLetter]
-			box.textContent = pressedKey
-			if (nextLetter !== 11) {
-				row.children[nextLetter + 1].textContent = "_"
-			}
-			
-			currentGuess.push(pressedKey)
-			nextLetter += 1
-		}
-
-		function deleteLetter () {
-			let row = document.getElementsByClassName("typing-row")[0]
-			let box = row.children[nextLetter - 1]
-			box.textContent = "_"
-			if (nextLetter !== 12) {
-				row.children[nextLetter].textContent = ""
-			}
-			
-			currentGuess.pop()
-			nextLetter -= 1
-		}
-
-		function checkGuess () {
-			let row = document.getElementsByClassName("guess-row")[6 - guessesRemaining]
-			let guessString = ''
-
-			for (const val of currentGuess) {
-				guessString += val
-			}
-
-			if (CHARNAMES.indexOf(guessString) == -1) {
-				toastr.error("Character not in list!")
+			if (CHARNAMES.indexOf(guessString.toLowerCase()) == -1) {
 				return
 			}
 			
-			guessChar = CHARS[CHARNAMES.indexOf(guessString)]
-			
-			let row2 = document.getElementsByClassName("typing-row")[0]
-			for (let i = 0; i < 12; i++) {
-				let box = row2.children[i]
-				box.textContent = ""
-				if (i == 0)
-					box.textContent = "_";
-			}
+			guessChar = CHARS[CHARNAMES.indexOf(guessString.toLowerCase())]
+			textbox.value = ""
 			
 			for (let i = 0; i < 5; i++) {
 				let letterColor = ''
 				let box = row.children[i]
-				let letter = currentGuess[i]
 				
 				if (i == 0) {
 					if (guessChar.game == rightChar.game) {
 						letterColor = "Square/green.png"
+						boardColors[NUMBER_OF_GUESSES - guessesRemaining][i] = "g"
 					} else if ((guessChar.game == rightChar.chapter && guessChar.chapter != rightChar.chapter) || (guessChar.game == rightChar.level && guessChar.level != rightChar.level)) {
 						letterColor = "Square/yellow.png"
+						boardColors[NUMBER_OF_GUESSES - guessesRemaining][i] = "y"
 					} else {
 						letterColor = "Square/red.png"
+						boardColors[NUMBER_OF_GUESSES - guessesRemaining][i] = "r"
 					}
 				}
 				
 				if (i == 1) {
 					if (guessChar.chapter == rightChar.chapter) {
 						letterColor = "Square/green.png"
+						boardColors[NUMBER_OF_GUESSES - guessesRemaining][i] = "g"
 					} else if ((guessChar.chapter == rightChar.game && guessChar.game != rightChar.game) || (guessChar.chapter == rightChar.level && guessChar.level != rightChar.level)) {
 						letterColor = "Square/yellow.png"
+						boardColors[NUMBER_OF_GUESSES - guessesRemaining][i] = "y"
 					} else {
 						letterColor = "Square/red.png"
+						boardColors[NUMBER_OF_GUESSES - guessesRemaining][i] = "r"
 					}
 				}
 				
 				if (i == 2) {
 					if (guessChar.class == rightChar.class) {
 						letterColor = "Square/green_class.png"
+						boardColors[NUMBER_OF_GUESSES - guessesRemaining][i] = "g"
 					} else {
 						letterColor = "Square/red_class.png"
+						boardColors[NUMBER_OF_GUESSES - guessesRemaining][i] = "r"
 					}
 				}
 				
 				if (i == 3) {
 					if (guessChar.level == rightChar.level) {
 						letterColor = "Square/green.png"
+						boardColors[NUMBER_OF_GUESSES - guessesRemaining][i] = "g"
 					} else if ((guessChar.level == rightChar.chapter && guessChar.chapter != rightChar.chapter) || (guessChar.level == rightChar.game && guessChar.game != rightChar.game)) {
 						letterColor = "Square/yellow.png"
+						boardColors[NUMBER_OF_GUESSES - guessesRemaining][i] = "y"
 					} else {
 						letterColor = "Square/red.png"
+						boardColors[NUMBER_OF_GUESSES - guessesRemaining][i] = "r"
 					}
 				}
 				
 				if (i == 4) {
 					if (guessChar.affinity == rightChar.affinity) {
 						letterColor = "Square/green.png"
+						boardColors[NUMBER_OF_GUESSES - guessesRemaining][i] = "g"
 					} else {
 						letterColor = "Square/red.png"
+						boardColors[NUMBER_OF_GUESSES - guessesRemaining][i] = "r"
 					}
 				}
 
@@ -316,22 +326,38 @@
 			}
 
 			if (guessChar.name === rightChar.name) {
-				setTimeout(()=> {toastr.success("You guessed right! Game over!")},250*6)
+				setTimeout(()=> {
+					let endscreen = document.getElementById("endscreen")
+					let endText = document.getElementById("winOrLose")
+					let answer = document.getElementById("answer")
+					endText.textContent = "You won!"
+					answer.textContent = "The answer was " + rightChar.name + "."
+					endscreen.style.display = "block";
+				},250*6)
 				guessesRemaining = 0
 				return
 			} else {
 				guessesRemaining -= 1;
-				currentGuess = [];
-				nextLetter = 0;
 
 				if (guessesRemaining === 0) {
 					setTimeout(()=> {
-						toastr.error("You've run out of guesses! Game over!");
-						toastr.info(`The right character was: "${rightChar.name}"`);
+						let endscreen = document.getElementById("endscreen")
+						let endText = document.getElementById("winOrLose")
+						let answer = document.getElementById("answer")
+						endText.textContent = "You lost!"
+						answer.textContent = "The answer was " + rightChar.name + "."
+						endscreen.style.display = "block";
 					},250*6)
 				}
 			}
 		}
+		
+		const node = document.getElementById("typeBox")
+		node.addEventListener("keyup", function(event) {
+			if (event.key === "Enter") {
+				checkGuess(node)
+			}
+		})
 	</script>
 </body>
 </html>
