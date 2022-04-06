@@ -38,7 +38,7 @@ Echidna,6,11,1,Hero,Ice
 Bartre (6),6,11,2,Warrior,Thunder
 Raigh,6,12,12,Shaman,Ice
 Cath,6,12,5,Thief,Anima
-Melady,6,13,10,Wyvern Rider,Dark
+Melady,6,13,10,Wyvern Knight,Dark
 Perceval,6,13,5,Paladin,Dark
 Cecilia,6,14,1,Valkyrie,Anima
 Sophia,6,14,1,Shaman,Dark
@@ -46,7 +46,7 @@ Igrene,6,15,1,Sniper,Ice
 Garret,6,15,1,Berserker,Wind
 Fae,6,16,1,Manakete,Light
 Hugh,6,16,15,Mage,Wind
-Zeiss,6,16,7,Wyvern Rider,Thunder
+Zeiss,6,16,7,Wyvern Knight,Thunder
 Douglas,6,17,8,General,Thunder
 Niime,6,19,18,Druid,Anima
 Juno,6,20,9,Falcoknight,Light
@@ -80,7 +80,7 @@ Fiora,7,19,7,Pegasus Knight,Wind
 Legault,7,20,12,Thief,Ice
 Ninian,7,21,1,Dancer,Ice
 Isadora,7,22,1,Paladin,Dark
-Heath,7,22,7,Wyvern Rider,Thunder
+Heath,7,22,7,Wyvern Knight,Thunder
 Rath,7,22,9,Nomad,Dark
 Hawkeye,7,23,4,Berserker,Wind
 Geitz,7,24,3,Warrior,Thunder
@@ -124,7 +124,7 @@ L'Arachel,8,11,3,Troubador,Light
 Dozla,8,11,1,Berserker,Thunder
 Saleh,8,12,1,Sage,Wind
 Ewan,8,12,1,Pupil,Light
-Cormag,8,13,11,Wyvern Rider,Fire
+Cormag,8,13,11,Wyvern Knight,Fire
 Rennac,8,14,1,Rogue,Dark
 Duessel,8,15,10,Great Knight,Anima
 Knoll,8,15,10,Shaman,Dark
