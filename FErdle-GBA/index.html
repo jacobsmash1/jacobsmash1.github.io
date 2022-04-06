@@ -8,8 +8,10 @@
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
+	<button style="background-color:#141414; float:up-left;" onclick="openHelp()"><img src="Square/help.png"></img></button>
     <h1> FErdle GBA </h1>
-	
+	<h2 style="text-align:center;"> A Fire Emblem 6-8 <a style="color:white;" href="https://www.nytimes.com/games/wordle/index.html">Wordle</a>-like by jacobsmash1 <h2>
+	<h3 style="text-align:center;"> Guess a playable unit from Fire Emblem 6-8! <h3>
     <div id="game-board">
 		<div class="typing-row">
 			<div class="dropdown">
@@ -28,6 +30,22 @@
 			</div>
 		</div>
     
+		<div class="dropdown-content" id="help">
+			<button style="float:right; background-color:#141414; border: none;" onclick="closeHelp()"><img src="Square/x.png"></img></button>
+			<a>Your goal is to correctly guess a character from FE6-8.</a>
+			<a>You have 7 guesses, and each guess gives you information.</a>
+			<a></a>
+			<a>The first collumn indicates the game that the character is from, the second collumn indicates the earliest chapter they join in.</a>
+			<a>The third collumn indicates their starting class, the fourth collumn indicates their starting level, and the fifth collumn indicates their affinity.</a>
+			<a></a>
+			<a>A green square is correct, a red square is incorrect, and a yellow square is correct but in the wrong spot.</a>
+			<a></a>
+			<a>Characters in both FE6 and FE7 have an entry for both games (e.g. Karel (6) and Karel (7))</a>
+			<a>FE7 characters assume you skipped Lyn mode and are playing Hector mode.</a>
+			<a>Characters gained in gaiden chapters (e.g. FE6 Douglas) are counted as joining in the first regular chapter after the gaiden.</a>
+			<a>Kyle, Forde, and Ephraim join in chapter 5x, but do not permanently join your party until chapter 8</a>
+		</div>
+    
 		<div class="dropdown-content" id="endscreen">
 			<button style="float:right; background-color:#141414; border: none;" onclick="closeEndscreen()"><img src="Square/x.png"></img></button>
 			<a style="height:20px;"></a>
@@ -43,6 +61,15 @@
 		</div>
 	</div>
 	<div id="knowledge-cont">
+		<div id="affinity">
+            <div class="knowledge-div" style="background-image: url(Square/gray.png);" id="Fire"><img src="Affinity/Fire.png"></img></div>
+            <div class="knowledge-div" style="background-image: url(Square/gray.png);" id="Ice"><img src="Affinity/Ice.png"></img></div>
+            <div class="knowledge-div" style="background-image: url(Square/gray.png);" id="Wind"><img src="Affinity/Wind.png"></img></div>
+            <div class="knowledge-div" style="background-image: url(Square/gray.png);" id="Anima"><img src="Affinity/Anima.png"></img></div>
+            <div class="knowledge-div" style="background-image: url(Square/gray.png);" id="Light"><img src="Affinity/Light.png"></img></div>
+            <div class="knowledge-div" style="background-image: url(Square/gray.png);" id="Dark"><img src="Affinity/Dark.png"></img></div>
+            <div class="knowledge-div" style="background-image: url(Square/gray.png);" id="Thunder"><img src="Affinity/Thunder.png"></img></div>
+        </div>
         <div id="unpromoted">
 			<div class="knowledge-div" id="Archer"><img src="Class/Archer.png"></img></div>
 			<div class="knowledge-div" id="Brigand"><img src="Class/Brigand.png"></img></div>
@@ -90,15 +117,6 @@
 			<div class="knowledge-div" id="Pupil"><img src="Class/Pupil.png"></img></div>
 			<div class="knowledge-div" id="Recruit"><img src="Class/Recruit.png"></img></div>
 			<div class="knowledge-div" id="Transporter"><img src="Class/Transporter.png"></img></div>
-        </div>
-		<div id="affinity">
-            <div class="knowledge-div" style="background-image: url(Square/gray.png);" id="Fire"><img src="Affinity/Fire.png"></img></div>
-            <div class="knowledge-div" style="background-image: url(Square/gray.png);" id="Ice"><img src="Affinity/Ice.png"></img></div>
-            <div class="knowledge-div" style="background-image: url(Square/gray.png);" id="Wind"><img src="Affinity/Wind.png"></img></div>
-            <div class="knowledge-div" style="background-image: url(Square/gray.png);" id="Anima"><img src="Affinity/Anima.png"></img></div>
-            <div class="knowledge-div" style="background-image: url(Square/gray.png);" id="Light"><img src="Affinity/Light.png"></img></div>
-            <div class="knowledge-div" style="background-image: url(Square/gray.png);" id="Dark"><img src="Affinity/Dark.png"></img></div>
-            <div class="knowledge-div" style="background-image: url(Square/gray.png);" id="Thunder"><img src="Affinity/Thunder.png"></img></div>
         </div>
     </div>
 	<script>
@@ -420,6 +438,14 @@
 			d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
 			let expires = "expires="+d.toUTCString();
 			document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+		}
+		function closeHelp() {
+			let help = document.getElementById("help")
+			help.style.display = "none";
+		}
+		function openHelp() {
+			let help = document.getElementById("help")
+			help.style.display = "block";
 		}
 		function closeEndscreen() {
 			let endscreen = document.getElementById("endscreen")
