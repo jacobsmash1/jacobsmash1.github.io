@@ -1,0 +1,132 @@
+name,game,chapter,level,class,affinity
+Roy,6,1,1,Lord,Fire
+Marcus (6),6,1,1,Paladin,Ice
+Alen,6,1,1,Cavalier,Fire
+Lance,6,1,1,Cavalier,Anima
+Wolt,6,1,1,Archer,Ice
+Bors,6,1,1,Knight,Wind
+Merlinus (6),6,2,1,Transporter,Dark
+Elen,6,2,2,Priest,Wind
+Dieck,6,2,5,Mercenary,Thunder
+Wade,6,2,2,Fighter,Fire
+Lot,6,2,3,Fighter,Anima
+Shanna,6,2,1,Pegasus Knight,Wind
+Chad,6,3,1,Thief,Thunder
+Lugh,6,3,1,Mage,Fire
+Clarine,6,4,1,Troubador,Thunder
+Rutger,6,4,4,Myrmidon,Dark
+Saul,6,6,5,Priest,Ice
+Dorothy,6,6,3,Archer,Fire
+Sue,6,6,1,Nomad,Wind
+Zelot,6,7,1,Paladin,Dark
+Trec,6,7,4,Cavalier,Wind
+Noah,6,7,7,Cavalier,Anima
+Astolfo,6,8,10,Thief,Dark
+Lilina,6,8,1,Mage,Light
+Barthe,6,8,9,Knight,Ice
+Ogier,6,8,3,Mercenary,Wind
+Gwendolyn,6,8,1,Knight,Fire
+Fir,6,9,1,Myrmidon,Fire
+Sin,6,9,5,Nomad,Ice
+Geese,6,10,10,Pirate,Fire
+Gonzalez,6,10,5,Brigand,Thunder
+Klein,6,10,1,Sniper,Ice
+Thea,6,10,8,Pegasus Knight,Ice
+Larum,6,11,1,Dancer,Thunder
+Elffin,6,11,1,Dancer,Light
+Echidna,6,11,1,Hero,Ice
+Bartre (6),6,11,2,Warrior,Thunder
+Raigh,6,12,12,Shaman,Ice
+Cath,6,12,5,Thief,Anima
+Melady,6,13,10,Wyvern Rider,Dark
+Perceval,6,13,5,Paladin,Dark
+Cecilia,6,14,1,Valkyrie,Anima
+Sophia,6,14,1,Shaman,Dark
+Igrene,6,15,1,Sniper,Ice
+Garret,6,15,1,Berserker,Wind
+Fae,6,16,1,Manakete,Light
+Hugh,6,16,15,Mage,Wind
+Zeiss,6,16,7,Wyvern Rider,Thunder
+Douglas,6,17,8,General,Thunder
+Niime,6,19,18,Druid,Anima
+Juno,6,20,9,Falcoknight,Light
+Dayan,6,20,12,Nomadic Trooper,Anima
+Yoder,6,21,20,Bishop,Light
+Karel (6),6,23,19,Swordmaster,Light
+Hector,7,11,1,Lord,Thunder
+Matthew,7,11,2,Thief,Wind
+Oswin,7,12,9,Knight,Anima
+Serra,7,12,1,Priest,Thunder
+Eliwood,7,12,1,Lord,Anima
+Marcus (7),7,12,1,Paladin,Ice
+Lowen,7,12,2,Cavalier,Fire
+Rebecca,7,12,1,Archer,Fire
+Dorcas,7,12,3,Fighter,Fire
+Bartre (7),7,12,2,Fighter,Thunder
+Guy,7,13,3,Myrmidon,Fire
+Merlinus (7),7,14,5,Transporter,Dark
+Erk,7,14,1,Mage,Thunder
+Priscilla,7,14,3,Troubador,Wind
+Lyn,7,16,4,Lord,Wind
+Sain,7,16,4,Cavalier,Wind
+Kent,7,16,5,Cavalier,Anima
+Wil,7,16,4,Archer,Wind
+Florina,7,16,3,Pegasus Knight,Light
+Raven,7,17,5,Mercenary,Ice
+Lucius,7,17,3,Monk,Light
+Canas,7,18,8,Shaman,Anima
+Dart,7,19,8,Pirate,Fire
+Fiora,7,19,7,Pegasus Knight,Wind
+Legault,7,20,12,Thief,Ice
+Ninian,7,21,1,Dancer,Ice
+Isadora,7,22,1,Paladin,Dark
+Heath,7,22,7,Wyvern Rider,Thunder
+Rath,7,22,9,Nomad,Dark
+Hawkeye,7,23,4,Berserker,Wind
+Geitz,7,24,3,Warrior,Thunder
+Wallace,7,24,1,General,Thunder
+Farina,7,25,12,Pegasus Knight,Anima
+Pent,7,26,6,Sage,Ice
+Louise,7,26,4,Sniper,Light
+Karel (7),7,27,8,Swordmaster,Light
+Harken,7,27,8,Hero,Fire
+Nino,7,28,5,Mage,Fire
+Jaffar,7,29,13,Assassin,Ice
+Vaida,7,29,9,Wyvern Lord,Fire
+Nils,7,30,1,Dancer,Ice
+Karla,7,32,5,Swordmaster,Dark
+Renault,7,32,16,Bishop,Anima
+Athos,7,33,20,Archsage,Anima
+Eirika,8,1,1,Lord,Light
+Seth,8,1,1,Paladin,Anima
+Franz,8,1,1,Cavalier,Light
+Gilliam,8,1,4,Knight,Thunder
+Vanessa,8,2,1,Pegasus Knight,Anima
+Moulder,8,2,3,Priest,Anima
+Ross,8,2,1,Journeyman,Fire
+Garcia,8,2,4,Fighter,Fire
+Neimi,8,3,1,Archer,Fire
+Colm,8,3,2,Thief,Light
+Artur,8,4,2,Monk,Ice
+Lute,8,4,1,Mage,Anima
+Natasha,8,5,1,Priest,Ice
+Joshua,8,5,5,Myrmidon,Wind
+Ephraim,8,15,10,Lord,Fire
+Forde,8,8,6,Cavalier,Wind
+Kyle,8,8,5,Cavalier,Ice
+Tana,8,9,4,Pegasus Knight,Wind
+Amelia,8,9,1,Recruit,Thunder
+Innes,8,10,1,Sniper,Ice
+Gerik,8,10,10,Mercenary,Thunder
+Tethys,8,10,1,Dancer,Fire
+Marisa,8,10,5,Myrmidon,Ice
+L'Arachel,8,11,3,Troubador,Light
+Dozla,8,11,1,Berserker,Thunder
+Saleh,8,12,1,Sage,Wind
+Ewan,8,12,1,Pupil,Light
+Cormag,8,13,11,Wyvern Rider,Fire
+Rennac,8,14,1,Rogue,Dark
+Duessel,8,15,10,Great Knight,Anima
+Knoll,8,15,10,Shaman,Dark
+Myrrh,8,16,1,Manakete,Wind
+Syrene,8,17,1,Falcoknight,Thunder

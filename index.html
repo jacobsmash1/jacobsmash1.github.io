@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FErdle GBA</title>
+	<link rel="stylesheet" href="style.css">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet"/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
+<body>
+    <h1> FErdle GBA </h1>
+    
+    <div id="game-board">
+		<div class="typing-row">
+			<div class="letter-box">_</div>
+			<div class="letter-box"></div>
+			<div class="letter-box"></div>
+			<div class="letter-box"></div>
+			<div class="letter-box"></div>
+			<div class="letter-box"></div>
+			<div class="letter-box"></div>
+			<div class="letter-box"></div>
+			<div class="letter-box"></div>
+			<div class="letter-box"></div>
+			<div class="letter-box"></div>
+			<div class="letter-box"></div>
+		</div>
+    </div>
+	<div id="knowledge-cont">
+        <div id="unpromoted">
+			<div class="knowledge-div" id="Archer"><img src="Class/Archer.png"></img></div>
+			<div class="knowledge-div" id="Brigand"><img src="Class/Brigand.png"></img></div>
+			<div class="knowledge-div" id="Cavalier"><img src="Class/Cavalier.png"></img></div>
+			<div class="knowledge-div" id="Fighter"><img src="Class/Fighter.png"></img></div>
+			<div class="knowledge-div" id="Knight"><img src="Class/Knight.png"></img></div>
+			<div class="knowledge-div" id="Mage"><img src="Class/Mage.png"></img></div>
+			<div class="knowledge-div" id="Mercenary"><img src="Class/Mercenary.png"></img></div>
+			<div class="knowledge-div" id="Monk"><img src="Class/Monk.png"></img></div>
+			<div class="knowledge-div" id="Myrmidon"><img src="Class/Myrmidon.png"></img></div>
+			<div class="knowledge-div" id="Nomad"><img src="Class/Nomad.png"></img></div>
+			<div class="knowledge-div" id="Pegasus Knight"><img src="Class/Pegasus Knight.png"></img></div>
+			<div class="knowledge-div" id="Pirate"><img src="Class/Pirate.png"></img></div>
+			<div class="knowledge-div" id="Priest"><img src="Class/Priest.png"></img></div>
+			<div class="knowledge-div" id="Shaman"><img src="Class/Shaman.png"></img></div>
+			<div class="knowledge-div" id="Thief"><img src="Class/Thief.png"></img></div>
+			<div class="knowledge-div" id="Troubador"><img src="Class/Troubador.png"></img></div>
+			<div class="knowledge-div" id="Wyvern Knight"><img src="Class/Wyvern Knight.png"></img></div>
+		</div>
+		<div id="promoted">
+			<div class="knowledge-div" id="Assassin"><img src="Class/Assassin.png"></img></div>
+			<div class="knowledge-div" id="Berserker"><img src="Class/Berserker.png"></img></div>
+			<div class="knowledge-div" id="Bishop"><img src="Class/Bishop.png"></img></div>
+			<div class="knowledge-div" id="Druid"><img src="Class/Druid.png"></img></div>
+			<div class="knowledge-div" id="Falcoknight"><img src="Class/Falcoknight.png"></img></div>
+			<div class="knowledge-div" id="General"><img src="Class/General.png"></img></div>
+			<div class="knowledge-div" id="Great Knight"><img src="Class/Great Knight.png"></img></div>
+			<div class="knowledge-div" id="Hero"><img src="Class/Hero.png"></img></div>
+			<div class="knowledge-div" id="Nomadic Trooper"><img src="Class/Nomadic Trooper.png"></img></div>
+			<div class="knowledge-div" id="Paladin"><img src="Class/Paladin.png"></img></div>
+			<div class="knowledge-div" id="Rogue"><img src="Class/Rogue.png"></img></div>
+			<div class="knowledge-div" id="Sage"><img src="Class/Sage.png"></img></div>
+			<div class="knowledge-div" id="Sniper"><img src="Class/Sniper.png"></img></div>
+			<div class="knowledge-div" id="Swordmaster"><img src="Class/Swordmaster.png"></img></div>
+			<div class="knowledge-div" id="Valkyrie"><img src="Class/Valkyrie.png"></img></div>
+			<div class="knowledge-div" id="Warrior"><img src="Class/Warrior.png"></img></div>
+			<div class="knowledge-div" id="Wyvern Lord"><img src="Class/Wyvern Lord.png"></img></div>
+        </div>
+		<div id="unique">
+            <div class="knowledge-div" id="Archsage"><img src="Class/Archsage.png"></img></div>
+			<div class="knowledge-div" id="Dancer"><img src="Class/Dancer.png"></img></div>
+			<div class="knowledge-div" id="Journeyman"><img src="Class/Journeyman.png"></img></div>
+			<div class="knowledge-div" id="Lord"><img src="Class/Lord.png"></img></div>
+			<div class="knowledge-div" id="Manakete"><img src="Class/Manakete.png"></img></div>
+			<div class="knowledge-div" id="Pupil"><img src="Class/Pupil.png"></img></div>
+			<div class="knowledge-div" id="Recruit"><img src="Class/Recruit.png"></img></div>
+			<div class="knowledge-div" id="Transporter"><img src="Class/Transporter.png"></img></div>
+        </div>
+		<div id="affinity">
+            <div class="knowledge-div" style="background-image: url(Square/gray.png);" id="Fire"><img src="Affinity/Fire.png"></img></div>
+            <div class="knowledge-div" style="background-image: url(Square/gray.png);" id="Ice"><img src="Affinity/Ice.png"></img></div>
+            <div class="knowledge-div" style="background-image: url(Square/gray.png);" id="Wind"><img src="Affinity/Wind.png"></img></div>
+            <div class="knowledge-div" style="background-image: url(Square/gray.png);" id="Anima"><img src="Affinity/Anima.png"></img></div>
+            <div class="knowledge-div" style="background-image: url(Square/gray.png);" id="Light"><img src="Affinity/Light.png"></img></div>
+            <div class="knowledge-div" style="background-image: url(Square/gray.png);" id="Dark"><img src="Affinity/Dark.png"></img></div>
+            <div class="knowledge-div" style="background-image: url(Square/gray.png);" id="Thunder"><img src="Affinity/Thunder.png"></img></div>
+        </div>
+    </div>
+	
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+	<script>
+		async function downloadFile() {
+			let response = await fetch("/chars.csv");
+				
+			if(response.status != 200) {
+				throw new Error("Server Error");
+			}
+				
+			// read response stream as text
+			let text_data = await response.text();
+
+			return text_data;
+		}
+		
+		function csv_To_Array(str, delimiter = ",") {
+			const header_cols = str.slice(0, str.indexOf("\n")).split(delimiter);
+			const row_data = str.slice(str.indexOf("\n") + 1).split("\n");
+			const arr = row_data.map(function (row) {
+				const values = row.split(delimiter);
+				const el = header_cols.reduce(function (object, header, index) {
+					object[header] = values[index];
+					return object;
+					}, {});
+				return el;
+			});
+
+			// return the array
+			return arr;
+			
+			//credit: https://www.delftstack.com/howto/javascript/csv-to-array-in-javascript/
+		}
+		const CHARS = csv_To_Array(downloadFile())
+		/*const CHARS = [
+			{name:"Roy",class:"Lord",affinity:"Fire",level:1,game:6,chapter:1}
+		]*/
+		var CHARNAMES = []
+		for (let i = 0; i < CHARS.length; i++) {
+			CHARNAMES[i] = CHARS[i].name.toLowerCase()
+		}
+
+		const NUMBER_OF_GUESSES = 6;
+		let guessesRemaining = NUMBER_OF_GUESSES;
+		let currentGuess = [];
+		let nextLetter = 0;
+		
+		let rightCharIndex = Math.floor(Math.random() * CHARS.length)
+		let rightChar = CHARS[rightCharIndex]
+
+		function initBoard() {
+			let board = document.getElementById("game-board");
+
+			for (let i = 0; i < NUMBER_OF_GUESSES; i++) {
+				let row = document.createElement("div")
+				row.className = "guess-row"
+				
+				for (let j = 0; j < 5; j++) {
+					let box = document.createElement("div")
+					box.className = "guess-box"
+					let img = document.createElement("img")
+					img.src = ""
+					if (j == 2) {
+						box.style.backgroundImage = 'url(Square/gray_class.png)'
+					}
+					box.appendChild(img)
+					row.appendChild(box)
+				}
+
+				board.appendChild(row)
+			}
+		}
+
+		initBoard()
+
+
+		document.addEventListener("keyup", (e) => {
+
+			if (guessesRemaining === 0) {
+				return
+			}
+
+			let pressedKey = String(e.key)
+			if (pressedKey === "Backspace" && nextLetter !== 0) {
+				deleteLetter()
+				return
+			}
+
+			if (pressedKey === "Enter") {
+				checkGuess()
+				return
+			}
+
+			let found = pressedKey.match(/[a-z()67' ]/gi)
+			if (!found || pressedKey.length > 1) {
+				return
+			} else {
+				insertLetter(pressedKey)
+			}
+		})
+
+		function insertLetter (pressedKey) {
+			if (nextLetter === 12) {
+				return
+			}
+			pressedKey = pressedKey.toLowerCase()
+
+			let row = document.getElementsByClassName("typing-row")[0]
+			let box = row.children[nextLetter]
+			box.textContent = pressedKey
+			if (nextLetter !== 11) {
+				row.children[nextLetter + 1].textContent = "_"
+			}
+			
+			currentGuess.push(pressedKey)
+			nextLetter += 1
+		}
+
+		function deleteLetter () {
+			let row = document.getElementsByClassName("typing-row")[0]
+			let box = row.children[nextLetter - 1]
+			box.textContent = "_"
+			if (nextLetter !== 12) {
+				row.children[nextLetter].textContent = ""
+			}
+			
+			currentGuess.pop()
+			nextLetter -= 1
+		}
+
+		function checkGuess () {
+			let row = document.getElementsByClassName("guess-row")[6 - guessesRemaining]
+			let guessString = ''
+
+			for (const val of currentGuess) {
+				guessString += val
+			}
+
+			if (CHARNAMES.indexOf(guessString) == -1) {
+				toastr.error("Character not in list!")
+				return
+			}
+			
+			guessChar = CHARS[CHARNAMES.indexOf(guessString)]
+			
+			let row2 = document.getElementsByClassName("typing-row")[0]
+			for (let i = 0; i < 12; i++) {
+				let box = row2.children[i]
+				box.textContent = ""
+				if (i == 0)
+					box.textContent = "_";
+			}
+			
+			for (let i = 0; i < 5; i++) {
+				let letterColor = ''
+				let box = row.children[i]
+				let letter = currentGuess[i]
+				
+				if (i == 0) {
+					if (guessChar.game == rightChar.game) {
+						letterColor = "Square/green.png"
+					} else if (guessChar.game == rightChar.chapter || guessChar.game == rightChar.level) {
+						letterColor = "Square/yellow.png"
+					} else {
+						letterColor = "Square/red.png"
+					}
+				}
+				
+				if (i == 1) {
+					if (guessChar.chapter == rightChar.chapter) {
+						letterColor = "Square/green.png"
+					} else if (guessChar.chapter == rightChar.game || guessChar.chapter == rightChar.level) {
+						letterColor = "Square/yellow.png"
+					} else {
+						letterColor = "Square/red.png"
+					}
+				}
+				
+				if (i == 2) {
+					if (guessChar.class == rightChar.class) {
+						letterColor = "Square/green_class.png"
+					} else {
+						letterColor = "Square/red_class.png"
+					}
+				}
+				
+				if (i == 3) {
+					if (guessChar.level == rightChar.level) {
+						letterColor = "Square/green.png"
+					} else if (guessChar.level == rightChar.chapter || guessChar.level == rightChar.game) {
+						letterColor = "Square/yellow.png"
+					} else {
+						letterColor = "Square/red.png"
+					}
+				}
+				
+				if (i == 4) {
+					if (guessChar.affinity == rightChar.affinity) {
+						letterColor = "Square/green.png"
+					} else {
+						letterColor = "Square/red.png"
+					}
+				}
+
+				let delay = 250 * i
+				setTimeout(()=> {
+					box.style.backgroundImage = "url(" + letterColor + ")"
+					if (i == 0) {
+						box.textContent = "" + guessChar.game
+					}
+					if (i == 1) {
+						box.textContent = "" + guessChar.chapter
+					}
+					if (i == 2) {
+						let tile = document.getElementById(guessChar.class)
+						tile.style.backgroundImage = "url(" + letterColor + ")"
+						let img = box.children[0]
+						img.src = "Class/" + guessChar.class + ".png"
+					}
+					if (i == 3) {
+						box.textContent = "" + guessChar.level
+					}
+					if (i == 4) {
+						let tile = document.getElementById(guessChar.affinity)
+						tile.style.backgroundImage = "url(" + letterColor + ")"
+						let img = box.children[0]
+						img.src = "Affinity/" + guessChar.affinity + ".png"
+					}
+				}, delay)
+			}
+
+			if (guessChar.name === rightChar.name) {
+				setTimeout(()=> {toastr.success("You guessed right! Game over!")},250*6)
+				guessesRemaining = 0
+				return
+			} else {
+				guessesRemaining -= 1;
+				currentGuess = [];
+				nextLetter = 0;
+
+				if (guessesRemaining === 0) {
+					setTimeout(()=> {
+						toastr.error("You've run out of guesses! Game over!");
+						toastr.info(`The right character was: "${rightChar.name}"`);
+					},250*6)
+				}
+			}
+		}
+	</script>
+</body>
+</html>
