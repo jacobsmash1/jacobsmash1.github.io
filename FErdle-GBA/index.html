@@ -287,6 +287,9 @@
 				}
 
 				let delay = 250 * i
+				if (incwin == false) {
+					delay = 0
+				}
 				setTimeout(()=> {
 					box.style.backgroundImage = "url(" + letterColor + ")"
 					if (i == 0) {
