@@ -44,6 +44,7 @@
 			<a>FE7 characters assume you skipped Lyn mode and are playing Hector mode.</a>
 			<a>Characters gained in gaiden chapters (e.g. FE6 Douglas) are counted as joining in the first regular chapter after the gaiden.</a>
 			<a>Kyle, Forde, and Ephraim join in chapter 5x, but do not permanently join your party until chapter 8</a>
+			<a>Characters from the Creature Campaign and the Trial maps are excluded.</a>
 		</div>
     
 		<div class="dropdown-content" id="endscreen">
@@ -503,7 +504,7 @@
 			var time_difference = date.getTime() - startDate.getTime()
 			var days_difference = Math.ceil(time_difference / (1000 * 60 * 60 * 24))
 			
-			navigator.clipboard.writeText("FErdle GBA #" + days_difference + " " + guesses + "/" + NUMBER_OF_GUESSES + "\n" + grid + "https://jacobsmash1.github.io/FErdle-GBA")
+			navigator.clipboard.writeText("FErdle GBA #" + days_difference + " - " + guesses + "/" + NUMBER_OF_GUESSES + "\n" + grid + "https://jacobsmash1.github.io/FErdle-GBA")
 			setTimeout(()=> {
 				let popup = document.getElementById("popup")
 				popup.style.display = "none";
