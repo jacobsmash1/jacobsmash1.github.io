@@ -33,12 +33,13 @@
 		<div class="dropdown-content" id="help">
 			<button style="float:right; background-color:#141414; border: none;" onclick="closeHelp()"><img src="Square/x.png"></img></button>
 			<a>Your goal is to correctly guess a character from FE6-8.</a>
-			<a>You have 7 guesses, and each guess gives you information.</a>
+			<a>You have 6 guesses, and each guess gives you information.</a>
 			<a></a>
 			<a>The first collumn indicates the game that the character is from, the second collumn indicates the earliest chapter they join in.</a>
 			<a>The third collumn indicates their starting class, the fourth collumn indicates their starting level, and the fifth collumn indicates their affinity.</a>
 			<a></a>
-			<a>A green square is correct, a red square is incorrect, and a yellow square is correct but in the wrong spot.</a>
+			<a>A green square is correct, a red square is incorrect, a blue square tells you if the number should be higher or lower, </a>
+			<a>and a yellow square means the class is in the correct class tree.</a>
 			<a></a>
 			<a>Characters in both FE6 and FE7 have an entry for both games (e.g. Karel (6) and Karel (7))</a>
 			<a>FE7 characters assume you skipped Lyn mode and are playing Hector mode.</a>
@@ -72,59 +73,238 @@
             <div class="knowledge-div" style="background-image: url(Square/gray.png);" id="Thunder"><img src="Affinity/Thunder.png"></img></div>
         </div>
         <div id="unpromoted">
-			<div class="knowledge-div" id="Archer"><img src="Class/Archer.png"></img></div>
-			<div class="knowledge-div" id="Brigand"><img src="Class/Brigand.png"></img></div>
-			<div class="knowledge-div" id="Cavalier"><img src="Class/Cavalier.png"></img></div>
-			<div class="knowledge-div" id="Fighter"><img src="Class/Fighter.png"></img></div>
-			<div class="knowledge-div" id="Knight"><img src="Class/Knight.png"></img></div>
-			<div class="knowledge-div" id="Mage"><img src="Class/Mage.png"></img></div>
-			<div class="knowledge-div" id="Mercenary"><img src="Class/Mercenary.png"></img></div>
-			<div class="knowledge-div" id="Monk"><img src="Class/Monk.png"></img></div>
-			<div class="knowledge-div" id="Myrmidon"><img src="Class/Myrmidon.png"></img></div>
-			<div class="knowledge-div" id="Nomad"><img src="Class/Nomad.png"></img></div>
-			<div class="knowledge-div" id="Pegasus Knight"><img src="Class/Pegasus Knight.png"></img></div>
-			<div class="knowledge-div" id="Pirate"><img src="Class/Pirate.png"></img></div>
-			<div class="knowledge-div" id="Priest"><img src="Class/Priest.png"></img></div>
-			<div class="knowledge-div" id="Shaman"><img src="Class/Shaman.png"></img></div>
-			<div class="knowledge-div" id="Thief"><img src="Class/Thief.png"></img></div>
-			<div class="knowledge-div" id="Troubador"><img src="Class/Troubador.png"></img></div>
-			<div class="knowledge-div" id="Wyvern Knight"><img src="Class/Wyvern Knight.png"></img></div>
+			<div class="knowledge-div" id="Lord"><img src="Class/Lord.png"></img></div>
+			
+			<div class="knowledge-div"><img src="Square/black.png"></img></div>
+			<div class="knowledge-div"><img src="Square/black.png"></img></div>
+			<div class="knowledge-div"><img src="Square/black.png"></img></div>
+			
+			<div class="knowledge-div" id="Journeyman"><img src="Class/Journeyman.png"></img></div>
+			
+			<div class="knowledge-div"><img src="Square/black.png"></img></div>
+			<div class="knowledge-div"><img src="Square/black.png"></img></div>
+			<div class="knowledge-div"><img src="Square/black.png"></img></div>
+			<div class="knowledge-div"><img src="Square/black.png"></img></div>
+			<div class="knowledge-div"><img src="Square/black.png"></img></div>
+			
+			<div class="knowledge-div" id="Recruit"><img src="Class/Recruit.png"></img></div>
+			
+			<div class="knowledge-div"><img src="Square/black.png"></img></div>
+			
+			<div class="knowledge-div" id="Transporter"><img src="Class/Transporter.png"></img></div>
+			<div class="knowledge-div"><img src="Square/black.png"></img></div>
+			<div class="knowledge-div"><img src="Square/black.png"></img></div>
+			<div class="knowledge-div"><img src="Square/black.png"></img></div>
+			
+            <div class="knowledge-div" id="Archsage"><img src="Class/Archsage.png"></img></div>
+			
+			<div class="knowledge-div" id="Pupil"><img src="Class/Pupil.png"></img></div>
+			
+			<div class="knowledge-div" id="Dancer"><img src="Class/Dancer.png"></img></div>
+			
+			<div class="knowledge-div"><img src="Square/black.png"></img></div>
+			<div class="knowledge-div"><img src="Square/black.png"></img></div>
+			<div class="knowledge-div"><img src="Square/black.png"></img></div>
+			<div class="knowledge-div"><img src="Square/black.png"></img></div>
+			
+			<div class="knowledge-div" id="Manakete"><img src="Class/Manakete.png"></img></div>
 		</div>
 		<div id="promoted">
-			<div class="knowledge-div" id="Assassin"><img src="Class/Assassin.png"></img></div>
-			<div class="knowledge-div" id="Berserker"><img src="Class/Berserker.png"></img></div>
-			<div class="knowledge-div" id="Bishop"><img src="Class/Bishop.png"></img></div>
-			<div class="knowledge-div" id="Druid"><img src="Class/Druid.png"></img></div>
-			<div class="knowledge-div" id="Falcoknight"><img src="Class/Falcoknight.png"></img></div>
-			<div class="knowledge-div" id="General"><img src="Class/General.png"></img></div>
-			<div class="knowledge-div" id="Great Knight"><img src="Class/Great Knight.png"></img></div>
-			<div class="knowledge-div" id="Hero"><img src="Class/Hero.png"></img></div>
-			<div class="knowledge-div" id="Nomadic Trooper"><img src="Class/Nomadic Trooper.png"></img></div>
-			<div class="knowledge-div" id="Paladin"><img src="Class/Paladin.png"></img></div>
-			<div class="knowledge-div" id="Rogue"><img src="Class/Rogue.png"></img></div>
-			<div class="knowledge-div" id="Sage"><img src="Class/Sage.png"></img></div>
-			<div class="knowledge-div" id="Sniper"><img src="Class/Sniper.png"></img></div>
-			<div class="knowledge-div" id="Swordmaster"><img src="Class/Swordmaster.png"></img></div>
-			<div class="knowledge-div" id="Valkyrie"><img src="Class/Valkyrie.png"></img></div>
-			<div class="knowledge-div" id="Warrior"><img src="Class/Warrior.png"></img></div>
-			<div class="knowledge-div" id="Wyvern Lord"><img src="Class/Wyvern Lord.png"></img></div>
+			<div class="knowledge-div" id="Myrmidon"><img src="Class/Myrmidon.png"></img></div>
+			<div class="knowledge-div" id="Thief"><img src="Class/Thief.png"></img></div>
+			
+			<div class="knowledge-div"><img src="Square/black.png"></img></div>
+			
+			<div class="knowledge-div" id="Brigand"><img src="Class/Brigand.png"></img></div>
+			<div class="knowledge-div" id="Pirate"><img src="Class/Pirate.png"></img></div>
+			<div class="knowledge-div" id="Fighter"><img src="Class/Fighter.png"></img></div>
+			<div class="knowledge-div" id="Mercenary"><img src="Class/Mercenary.png"></img></div>
+			<div class="knowledge-div" id="Archer"><img src="Class/Archer.png"></img></div>
+			
+			<div class="knowledge-div"><img src="Square/black.png"></img></div>
+			<div class="knowledge-div"><img src="Square/black.png"></img></div>
+			
+			<div class="knowledge-div" id="Knight"><img src="Class/Knight.png"></img></div>
+			<div class="knowledge-div" id="Cavalier"><img src="Class/Cavalier.png"></img></div>
+			
+			<div class="knowledge-div"><img src="Square/black.png"></img></div>
+			
+			<div class="knowledge-div" id="Nomad"><img src="Class/Nomad.png"></img></div>
+			
+			<div class="knowledge-div"><img src="Square/black.png"></img></div>
+			
+			<div class="knowledge-div" id="Shaman"><img src="Class/Shaman.png"></img></div>
+			<div class="knowledge-div" id="Mage"><img src="Class/Mage.png"></img></div>
+			<div class="knowledge-div" id="Monk"><img src="Class/Monk.png"></img></div>
+			<div class="knowledge-div" id="Priest"><img src="Class/Priest.png"></img></div>
+			<div class="knowledge-div" id="Cleric"><img src="Class/Cleric.png"></img></div>
+			<div class="knowledge-div" id="Troubador"><img src="Class/Troubador.png"></img></div>
+			
+			<div class="knowledge-div"><img src="Square/black.png"></img></div>
+			<div class="knowledge-div"><img src="Square/black.png"></img></div>
+			
+			<div class="knowledge-div" id="Pegasus Knight"><img src="Class/Pegasus Knight.png"></img></div>
+			<div class="knowledge-div" id="Wyvern Rider"><img src="Class/Wyvern Rider.png"></img></div>
+			
         </div>
 		<div id="unique">
-            <div class="knowledge-div" id="Archsage"><img src="Class/Archsage.png"></img></div>
-			<div class="knowledge-div" id="Dancer"><img src="Class/Dancer.png"></img></div>
-			<div class="knowledge-div" id="Journeyman"><img src="Class/Journeyman.png"></img></div>
-			<div class="knowledge-div" id="Lord"><img src="Class/Lord.png"></img></div>
-			<div class="knowledge-div" id="Manakete"><img src="Class/Manakete.png"></img></div>
-			<div class="knowledge-div" id="Pupil"><img src="Class/Pupil.png"></img></div>
-			<div class="knowledge-div" id="Recruit"><img src="Class/Recruit.png"></img></div>
-			<div class="knowledge-div" id="Transporter"><img src="Class/Transporter.png"></img></div>
+			<div class="knowledge-div" id="Swordmaster"><img src="Class/Swordmaster.png"></img></div>
+			<div class="knowledge-div" id="Assassin"><img src="Class/Assassin.png"></img></div>
+			<div class="knowledge-div" id="Rogue"><img src="Class/Rogue.png"></img></div>
+			
+			<div class="knowledge-div"><img src="Square/black.png"></img></div>
+			
+			<div class="knowledge-div" id="Berserker"><img src="Class/Berserker.png"></img></div>
+			<div class="knowledge-div" id="Warrior"><img src="Class/Warrior.png"></img></div>
+			<div class="knowledge-div" id="Hero"><img src="Class/Hero.png"></img></div>
+			<div class="knowledge-div" id="Ranger"><img src="Class/Ranger.png"></img></div>
+			<div class="knowledge-div" id="Sniper"><img src="Class/Sniper.png"></img></div>
+			
+			<div class="knowledge-div"><img src="Square/black.png"></img></div>
+			
+			<div class="knowledge-div" id="General"><img src="Class/General.png"></img></div>
+			<div class="knowledge-div" id="Great Knight"><img src="Class/Great Knight.png"></img></div>
+			<div class="knowledge-div" id="Paladin"><img src="Class/Paladin.png"></img></div>
+			
+			<div class="knowledge-div"><img src="Square/black.png"></img></div>
+			
+			<div class="knowledge-div" id="Nomadic Trooper"><img src="Class/Nomadic Trooper.png"></img></div>
+			
+			<div class="knowledge-div"><img src="Square/black.png"></img></div>
+			
+			<div class="knowledge-div" id="Druid"><img src="Class/Druid.png"></img></div>
+			<div class="knowledge-div" id="Summoner"><img src="Class/Summoner.png"></img></div>
+			<div class="knowledge-div" id="Mage Knight"><img src="Class/Mage Knight.png"></img></div>
+			<div class="knowledge-div" id="Sage"><img src="Class/Sage.png"></img></div>
+			<div class="knowledge-div" id="Bishop"><img src="Class/Bishop.png"></img></div>
+			<div class="knowledge-div" id="Valkyrie"><img src="Class/Valkyrie.png"></img></div>
+			
+			<div class="knowledge-div"><img src="Square/black.png"></img></div>
+			
+			<div class="knowledge-div" id="Falcoknight"><img src="Class/Falcoknight.png"></img></div>
+			<div class="knowledge-div" id="Wyvern Knight"><img src="Class/Wyvern Knight.png"></img></div>
+			<div class="knowledge-div" id="Wyvern Lord"><img src="Class/Wyvern Lord.png"></img></div>
         </div>
     </div>
 	<div class="flex">
-		<p>Inspired by <a style="color:white;" href="https://doopu.github.io/solkatti/">Sol Katti</a> and <a style="color:white;" href="https://squirdle.fireblend.com">Squirdle</a></p>
+		<p>Inspired by <a style="color:white;" href="https://doopu.github.io/solkatti/">Sol Katti</a>, <a style="color:white;" href="https://ferdle.github.io">Ferdle</a> and <a style="color:white;" href="https://squirdle.fireblend.com">Squirdle</a></p>
 	</div>
 	<script>
-		const CHARS = csv_To_Array("name,game,chapter,level,class,affinity\nRoy,6,1,1,Lord,Fire\nMarcus (6),6,1,1,Paladin,Ice\nAlen,6,1,1,Cavalier,Fire\nLance,6,1,1,Cavalier,Anima\nWolt,6,1,1,Archer,Ice\nBors,6,1,1,Knight,Wind\nMerlinus (6),6,2,1,Transporter,Dark\nElen,6,2,2,Priest,Wind\nDieck,6,2,5,Mercenary,Thunder\nWade,6,2,2,Fighter,Fire\nLot,6,2,3,Fighter,Anima\nShanna,6,2,1,Pegasus Knight,Wind\nChad,6,3,1,Thief,Thunder\nLugh,6,3,1,Mage,Fire\nClarine,6,4,1,Troubador,Thunder\nRutger,6,4,4,Myrmidon,Dark\nSaul,6,6,5,Priest,Ice\nDorothy,6,6,3,Archer,Fire\nSue,6,6,1,Nomad,Wind\nZelot,6,7,1,Paladin,Dark\nTrec,6,7,4,Cavalier,Wind\nNoah,6,7,7,Cavalier,Anima\nAstolfo,6,8,10,Thief,Dark\nLilina,6,8,1,Mage,Light\nBarthe,6,8,9,Knight,Ice\nOgier,6,8,3,Mercenary,Wind\nGwendolyn,6,8,1,Knight,Fire\nFir,6,9,1,Myrmidon,Fire\nSin,6,9,5,Nomad,Ice\nGeese,6,10,10,Pirate,Fire\nGonzalez,6,10,5,Brigand,Thunder\nKlein,6,10,1,Sniper,Ice\nThea,6,10,8,Pegasus Knight,Ice\nLarum,6,11,1,Dancer,Thunder\nElffin,6,11,1,Dancer,Light\nEchidna,6,11,1,Hero,Ice\nBartre (6),6,11,2,Warrior,Thunder\nRaigh,6,12,12,Shaman,Ice\nCath,6,12,5,Thief,Anima\nMelady,6,13,10,Wyvern Knight,Dark\nPerceval,6,13,5,Paladin,Dark\nCecilia,6,14,1,Valkyrie,Anima\nSophia,6,14,1,Shaman,Dark\nIgrene,6,15,1,Sniper,Ice\nGarret,6,15,1,Berserker,Wind\nFae,6,16,1,Manakete,Light\nHugh,6,16,15,Mage,Wind\nZeiss,6,16,7,Wyvern Knight,Thunder\nDouglas,6,17,8,General,Thunder\nNiime,6,19,18,Druid,Anima\nJuno,6,20,9,Falcoknight,Light\nDayan,6,20,12,Nomadic Trooper,Anima\nYoder,6,21,20,Bishop,Light\nKarel (6),6,23,19,Swordmaster,Light\nHector,7,11,1,Lord,Thunder\nMatthew,7,11,2,Thief,Wind\nOswin,7,12,9,Knight,Anima\nSerra,7,12,1,Priest,Thunder\nEliwood,7,12,1,Lord,Anima\nMarcus (7),7,12,1,Paladin,Ice\nLowen,7,12,2,Cavalier,Fire\nRebecca,7,12,1,Archer,Fire\nDorcas,7,12,3,Fighter,Fire\nBartre (7),7,12,2,Fighter,Thunder\nGuy,7,13,3,Myrmidon,Fire\nMerlinus (7),7,14,5,Transporter,Dark\nErk,7,14,1,Mage,Thunder\nPriscilla,7,14,3,Troubador,Wind\nLyn,7,16,4,Lord,Wind\nSain,7,16,4,Cavalier,Wind\nKent,7,16,5,Cavalier,Anima\nWil,7,16,4,Archer,Wind\nFlorina,7,16,3,Pegasus Knight,Light\nRaven,7,17,5,Mercenary,Ice\nLucius,7,17,3,Monk,Light\nCanas,7,18,8,Shaman,Anima\nDart,7,19,8,Pirate,Fire\nFiora,7,19,7,Pegasus Knight,Wind\nLegault,7,20,12,Thief,Ice\nNinian,7,21,1,Dancer,Ice\nIsadora,7,22,1,Paladin,Dark\nHeath,7,22,7,Wyvern Knight,Thunder\nRath,7,22,9,Nomad,Dark\nHawkeye,7,23,4,Berserker,Wind\nGeitz,7,24,3,Warrior,Thunder\nWallace,7,24,1,General,Thunder\nFarina,7,25,12,Pegasus Knight,Anima\nPent,7,26,6,Sage,Ice\nLouise,7,26,4,Sniper,Light\nKarel (7),7,27,8,Swordmaster,Light\nHarken,7,27,8,Hero,Fire\nNino,7,28,5,Mage,Fire\nJaffar,7,29,13,Assassin,Ice\nVaida,7,29,9,Wyvern Lord,Fire\nNils,7,30,1,Dancer,Ice\nKarla,7,32,5,Swordmaster,Dark\nRenault,7,32,16,Bishop,Anima\nAthos,7,33,20,Archsage,Anima\nEirika,8,1,1,Lord,Light\nSeth,8,1,1,Paladin,Anima\nFranz,8,1,1,Cavalier,Light\nGilliam,8,1,4,Knight,Thunder\nVanessa,8,2,1,Pegasus Knight,Anima\nMoulder,8,2,3,Priest,Anima\nRoss,8,2,1,Journeyman,Fire\nGarcia,8,2,4,Fighter,Fire\nNeimi,8,3,1,Archer,Fire\nColm,8,3,2,Thief,Light\nArtur,8,4,2,Monk,Ice\nLute,8,4,1,Mage,Anima\nNatasha,8,5,1,Priest,Ice\nJoshua,8,5,5,Myrmidon,Wind\nEphraim,8,8,4,Lord,Fire\nForde,8,8,6,Cavalier,Wind\nKyle,8,8,5,Cavalier,Ice\nTana,8,9,4,Pegasus Knight,Wind\nAmelia,8,9,1,Recruit,Thunder\nInnes,8,10,1,Sniper,Ice\nGerik,8,10,10,Mercenary,Thunder\nTethys,8,10,1,Dancer,Fire\nMarisa,8,10,5,Myrmidon,Ice\nL'Arachel,8,11,3,Troubador,Light\nDozla,8,11,1,Berserker,Thunder\nSaleh,8,12,1,Sage,Wind\nEwan,8,12,1,Pupil,Light\nCormag,8,10,9,Wyvern Knight,Fire\nRennac,8,14,1,Rogue,Dark\nDuessel,8,10,8,Great Knight,Anima\nKnoll,8,15,10,Shaman,Dark\nMyrrh,8,16,1,Manakete,Wind\nSyrene,8,17,1,Falcoknight,Thunder")
+		const CHARS = csv_To_Array("name,game,chapter,level,class,affinity\nRoy,6,1,1,Lord,Fire\nMarcus (6),6,1,1,Paladin,Ice\nAlen,6,1,1,Cavalier,Fire\nLance,6,1,1,Cavalier,Anima\nWolt,6,1,1,Archer,Ice\nBors,6,1,1,Knight,Wind\nMerlinus (6),6,2,1,Transporter,Dark\nElen,6,2,2,Cleric,Wind\nDieck,6,2,5,Mercenary,Thunder\nWade,6,2,2,Fighter,Fire\nLot,6,2,3,Fighter,Anima\nShanna,6,2,1,Pegasus Knight,Wind\nChad,6,3,1,Thief,Thunder\nLugh,6,3,1,Mage,Fire\nClarine,6,4,1,Troubador,Thunder\nRutger,6,4,4,Myrmidon,Dark\nSaul,6,6,5,Priest,Ice\nDorothy,6,6,3,Archer,Fire\nSue,6,6,1,Nomad,Wind\nZelot,6,7,1,Paladin,Dark\nTrec,6,7,4,Cavalier,Wind\nNoah,6,7,7,Cavalier,Anima\nAstolfo,6,8,10,Thief,Dark\nLilina,6,8,1,Mage,Light\nBarthe,6,8,9,Knight,Ice\nOgier,6,8,3,Mercenary,Wind\nGwendolyn,6,8,1,Knight,Fire\nFir,6,9,1,Myrmidon,Fire\nSin,6,9,5,Nomad,Ice\nGeese,6,10,10,Pirate,Fire\nGonzalez,6,10,5,Brigand,Thunder\nKlein,6,10,1,Sniper,Ice\nThea,6,10,8,Pegasus Knight,Ice\nLarum,6,11,1,Dancer,Thunder\nElffin,6,11,1,Dancer,Light\nEchidna,6,11,1,Hero,Ice\nBartre (6),6,11,2,Warrior,Thunder\nRaigh,6,12,12,Shaman,Ice\nCath,6,12,5,Thief,Anima\nMelady,6,13,10,Wyvern Rider,Dark\nPerceval,6,13,5,Paladin,Dark\nCecilia,6,14,1,Valkyrie,Anima\nSophia,6,14,1,Shaman,Dark\nIgrene,6,15,1,Sniper,Ice\nGarret,6,15,1,Berserker,Wind\nFae,6,16,1,Manakete,Light\nHugh,6,16,15,Mage,Wind\nZeiss,6,16,7,Wyvern Rider,Thunder\nDouglas,6,17,8,General,Thunder\nNiime,6,19,18,Druid,Anima\nJuno,6,20,9,Falcoknight,Light\nDayan,6,20,12,Nomadic Trooper,Anima\nYoder,6,21,20,Bishop,Light\nKarel (6),6,23,19,Swordmaster,Light\nHector,7,11,1,Lord,Thunder\nMatthew,7,11,2,Thief,Wind\nOswin,7,12,9,Knight,Anima\nSerra,7,12,1,Cleric,Thunder\nEliwood,7,12,1,Lord,Anima\nMarcus (7),7,12,1,Paladin,Ice\nLowen,7,12,2,Cavalier,Fire\nRebecca,7,12,1,Archer,Fire\nDorcas,7,12,3,Fighter,Fire\nBartre (7),7,12,2,Fighter,Thunder\nGuy,7,13,3,Myrmidon,Fire\nMerlinus (7),7,14,5,Transporter,Dark\nErk,7,14,1,Mage,Thunder\nPriscilla,7,14,3,Troubador,Wind\nLyn,7,16,4,Lord,Wind\nSain,7,16,4,Cavalier,Wind\nKent,7,16,5,Cavalier,Anima\nWil,7,16,4,Archer,Wind\nFlorina,7,16,3,Pegasus Knight,Light\nRaven,7,17,5,Mercenary,Ice\nLucius,7,17,3,Monk,Light\nCanas,7,18,8,Shaman,Anima\nDart,7,19,8,Pirate,Fire\nFiora,7,19,7,Pegasus Knight,Wind\nLegault,7,20,12,Thief,Ice\nNinian,7,21,1,Dancer,Ice\nIsadora,7,22,1,Paladin,Dark\nHeath,7,22,7,Wyvern Rider,Thunder\nRath,7,22,9,Nomad,Dark\nHawkeye,7,23,4,Berserker,Wind\nGeitz,7,24,3,Warrior,Thunder\nWallace,7,24,1,General,Thunder\nFarina,7,25,12,Pegasus Knight,Anima\nPent,7,26,6,Sage,Ice\nLouise,7,26,4,Sniper,Light\nKarel (7),7,27,8,Swordmaster,Light\nHarken,7,27,8,Hero,Fire\nNino,7,28,5,Mage,Fire\nJaffar,7,29,13,Assassin,Ice\nVaida,7,29,9,Wyvern Lord,Fire\nNils,7,30,1,Dancer,Ice\nKarla,7,32,5,Swordmaster,Dark\nRenault,7,32,16,Bishop,Anima\nAthos,7,33,20,Archsage,Anima\nEirika,8,1,1,Lord,Light\nSeth,8,1,1,Paladin,Anima\nFranz,8,1,1,Cavalier,Light\nGilliam,8,1,4,Knight,Thunder\nVanessa,8,2,1,Pegasus Knight,Anima\nMoulder,8,2,3,Priest,Anima\nRoss,8,2,1,Journeyman,Fire\nGarcia,8,2,4,Fighter,Fire\nNeimi,8,3,1,Archer,Fire\nColm,8,3,2,Thief,Light\nArtur,8,4,2,Monk,Ice\nLute,8,4,1,Mage,Anima\nNatasha,8,5,1,Cleric,Ice\nJoshua,8,5,5,Myrmidon,Wind\nEphraim,8,8,4,Lord,Fire\nForde,8,8,6,Cavalier,Wind\nKyle,8,8,5,Cavalier,Ice\nTana,8,9,4,Pegasus Knight,Wind\nAmelia,8,9,1,Recruit,Thunder\nInnes,8,10,1,Sniper,Ice\nGerik,8,10,10,Mercenary,Thunder\nTethys,8,10,1,Dancer,Fire\nMarisa,8,10,5,Myrmidon,Ice\nL'Arachel,8,11,3,Troubador,Light\nDozla,8,11,1,Berserker,Thunder\nSaleh,8,12,1,Sage,Wind\nEwan,8,12,1,Pupil,Light\nCormag,8,10,9,Wyvern Rider,Fire\nRennac,8,14,1,Rogue,Dark\nDuessel,8,10,8,Great Knight,Anima\nKnoll,8,15,10,Shaman,Dark\nMyrrh,8,16,1,Manakete,Wind\nSyrene,8,17,1,Falcoknight,Thunder")
+		const classes = [
+			"",
+			"Journeyman",
+			"Brigand",
+			"Pirate",
+			"Fighter",
+			"Mercenary",
+			"Archer",
+			"Berserker",
+			"Warrior",
+			"Hero",
+			"Ranger",
+			"Sniper",
+			"",
+			"Nomad",
+			"Nomadic Trooper",
+			"",
+			"Myrmidon",
+			"Thief",
+			"Swordmaster",
+			"Assassin",
+			"Rogue",
+			"",
+			"Pegasus Knight",
+			"Wyvern Rider",
+			"Falcoknight",
+			"Wyvern Knight",
+			"Wyvern Lord",
+			"",
+			"Recruit",
+			"Knight",
+			"Cavalier",
+			"General",
+			"Great Knight",
+			"Paladin",
+			"",
+			"Pupil",
+			"Shaman",
+			"Druid",
+			"Summoner",
+			"Mage",
+			"Mage Knight",
+			"Sage",
+			"Priest",
+			"Monk",
+			"Bishop",
+			"Valkyrie",
+			"Cleric",
+			"Troubador",
+			"",
+			"Archsage",
+			"Dancer",
+			"Manakete",
+			"Lord",
+			"Transporter",
+			""
+		]
+		const classTrees = [
+			[],
+			["Journeyman","Brigand","Pirate","Fighter","Mercenary","Archer","Berserker","Warrior","Hero","Ranger","Sniper"],
+			["Journeyman","Brigand","Pirate","Fighter","Mercenary","Archer","Berserker","Warrior","Hero","Ranger","Sniper"],
+			["Journeyman","Brigand","Pirate","Fighter","Mercenary","Archer","Berserker","Warrior","Hero","Ranger","Sniper"],
+			["Journeyman","Brigand","Pirate","Fighter","Mercenary","Archer","Berserker","Warrior","Hero","Ranger","Sniper"],
+			["Journeyman","Brigand","Pirate","Fighter","Mercenary","Archer","Berserker","Warrior","Hero","Ranger","Sniper"],
+			["Journeyman","Brigand","Pirate","Fighter","Mercenary","Archer","Berserker","Warrior","Hero","Ranger","Sniper"],
+			["Journeyman","Brigand","Pirate","Fighter","Mercenary","Archer","Berserker","Warrior","Hero","Ranger","Sniper"],
+			["Journeyman","Brigand","Pirate","Fighter","Mercenary","Archer","Berserker","Warrior","Hero","Ranger","Sniper"],
+			["Journeyman","Brigand","Pirate","Fighter","Mercenary","Archer","Berserker","Warrior","Hero","Ranger","Sniper"],
+			["Journeyman","Brigand","Pirate","Fighter","Mercenary","Archer","Berserker","Warrior","Hero","Ranger","Sniper"],
+			["Journeyman","Brigand","Pirate","Fighter","Mercenary","Archer","Berserker","Warrior","Hero","Ranger","Sniper"],
+			[],
+			["Nomad","Nomadic Trooper"],
+			["Nomad","Nomadic Trooper"],
+			[],
+			["Myrmidon","Thief","Swordmaster","Assassin","Rogue"],
+			["Myrmidon","Thief","Swordmaster","Assassin","Rogue"],
+			["Myrmidon","Thief","Swordmaster","Assassin","Rogue"],
+			["Myrmidon","Thief","Swordmaster","Assassin","Rogue"],
+			["Myrmidon","Thief","Swordmaster","Assassin","Rogue"],
+			[],
+			["Pegasus Knight","Wyvern Rider","Falcoknight","Wyvern Knight","Wyvern Lord"],
+			["Pegasus Knight","Wyvern Rider","Falcoknight","Wyvern Knight","Wyvern Lord"],
+			["Pegasus Knight","Wyvern Rider","Falcoknight","Wyvern Knight","Wyvern Lord"],
+			["Pegasus Knight","Wyvern Rider","Falcoknight","Wyvern Knight","Wyvern Lord"],
+			["Pegasus Knight","Wyvern Rider","Falcoknight","Wyvern Knight","Wyvern Lord"],
+			[],
+			["Recruit","Knight","Cavalier","General","Great Knight","Paladin"],
+			["Recruit","Knight","Cavalier","General","Great Knight","Paladin"],
+			["Recruit","Knight","Cavalier","General","Great Knight","Paladin"],
+			["Recruit","Knight","Cavalier","General","Great Knight","Paladin"],
+			["Recruit","Knight","Cavalier","General","Great Knight","Paladin"],
+			["Recruit","Knight","Cavalier","General","Great Knight","Paladin"],
+			[],
+			["Pupil","Shaman","Druid","Summoner","Mage","Mage Knight","Sage","Priest","Monk","Bishop","Valkyrie","Cleric","Troubador"],
+			["Pupil","Shaman","Druid","Summoner","Mage","Mage Knight","Sage","Priest","Monk","Bishop","Valkyrie","Cleric","Troubador"],
+			["Pupil","Shaman","Druid","Summoner","Mage","Mage Knight","Sage","Priest","Monk","Bishop","Valkyrie","Cleric","Troubador"],
+			["Pupil","Shaman","Druid","Summoner","Mage","Mage Knight","Sage","Priest","Monk","Bishop","Valkyrie","Cleric","Troubador"],
+			["Pupil","Shaman","Druid","Summoner","Mage","Mage Knight","Sage","Priest","Monk","Bishop","Valkyrie","Cleric","Troubador"],
+			["Pupil","Shaman","Druid","Summoner","Mage","Mage Knight","Sage","Priest","Monk","Bishop","Valkyrie","Cleric","Troubador"],
+			["Pupil","Shaman","Druid","Summoner","Mage","Mage Knight","Sage","Priest","Monk","Bishop","Valkyrie","Cleric","Troubador"],
+			["Pupil","Shaman","Druid","Summoner","Mage","Mage Knight","Sage","Priest","Monk","Bishop","Valkyrie","Cleric","Troubador"],
+			["Pupil","Shaman","Druid","Summoner","Mage","Mage Knight","Sage","Priest","Monk","Bishop","Valkyrie","Cleric","Troubador"],
+			["Pupil","Shaman","Druid","Summoner","Mage","Mage Knight","Sage","Priest","Monk","Bishop","Valkyrie","Cleric","Troubador"],
+			["Pupil","Shaman","Druid","Summoner","Mage","Mage Knight","Sage","Priest","Monk","Bishop","Valkyrie","Cleric","Troubador"],
+			["Pupil","Shaman","Druid","Summoner","Mage","Mage Knight","Sage","Priest","Monk","Bishop","Valkyrie","Cleric","Troubador"],
+			["Pupil","Shaman","Druid","Summoner","Mage","Mage Knight","Sage","Priest","Monk","Bishop","Valkyrie","Cleric","Troubador"],
+			[],
+			["Archsage"],
+			["Dancer"],
+			["Manakete"],
+			["Lord"],
+			["Transporter"],
+			[]
+		]
 		
 		var date = new Date()
 		var dateString = new Date(date.getTime() - (date.getTimezoneOffset() * 60000 )).toISOString().split("T")[0]
@@ -145,13 +325,14 @@
 			CHARNAMES[i] = CHARS[i].name.toLowerCase()
 		}
 
-		const NUMBER_OF_GUESSES = 7;
+		const NUMBER_OF_GUESSES = 6;
 		let guessesRemaining = NUMBER_OF_GUESSES;
 		
 		var seed = xmur3(dateString)
 		var rand = mulberry32(seed())
 		
-		let rightCharIndex = Math.floor(rand() * CHARS.length)
+		//let rightCharIndex = Math.floor(rand() * CHARS.length)
+		let rightCharIndex = Math.floor(Math.random() * CHARS.length)
 		let rightChar = CHARS[rightCharIndex]
 		
 		var win = true
@@ -255,12 +436,12 @@
 					if (guessChar.game == rightChar.game) {
 						letterColor = "Square/green.png"
 						boardColors[NUMBER_OF_GUESSES - guessesRemaining][i] = "g"
-					} else if ((guessChar.game == rightChar.chapter && guessChar.chapter != rightChar.chapter) || (guessChar.game == rightChar.level && guessChar.level != rightChar.level)) {
-						letterColor = "Square/yellow.png"
-						boardColors[NUMBER_OF_GUESSES - guessesRemaining][i] = "y"
+					} else if (parseInt(guessChar.game) < rightChar.game) {
+						letterColor = "Square/up.png"
+						boardColors[NUMBER_OF_GUESSES - guessesRemaining][i] = "b"
 					} else {
-						letterColor = "Square/red.png"
-						boardColors[NUMBER_OF_GUESSES - guessesRemaining][i] = "r"
+						letterColor = "Square/down.png"
+						boardColors[NUMBER_OF_GUESSES - guessesRemaining][i] = "b"
 					}
 				}
 				
@@ -268,12 +449,12 @@
 					if (guessChar.chapter == rightChar.chapter) {
 						letterColor = "Square/green.png"
 						boardColors[NUMBER_OF_GUESSES - guessesRemaining][i] = "g"
-					} else if ((guessChar.chapter == rightChar.game && guessChar.game != rightChar.game) || (guessChar.chapter == rightChar.level && guessChar.level != rightChar.level)) {
-						letterColor = "Square/yellow.png"
-						boardColors[NUMBER_OF_GUESSES - guessesRemaining][i] = "y"
+					} else if (parseInt(guessChar.chapter) < rightChar.chapter) {
+						letterColor = "Square/up.png"
+						boardColors[NUMBER_OF_GUESSES - guessesRemaining][i] = "b"
 					} else {
-						letterColor = "Square/red.png"
-						boardColors[NUMBER_OF_GUESSES - guessesRemaining][i] = "r"
+						letterColor = "Square/down.png"
+						boardColors[NUMBER_OF_GUESSES - guessesRemaining][i] = "b"
 					}
 				}
 				
@@ -282,8 +463,14 @@
 						letterColor = "Square/green_class.png"
 						boardColors[NUMBER_OF_GUESSES - guessesRemaining][i] = "g"
 					} else {
-						letterColor = "Square/red_class.png"
-						boardColors[NUMBER_OF_GUESSES - guessesRemaining][i] = "r"
+						var rightClassTree = classTrees[classes.indexOf(rightChar.class)]
+						if (rightClassTree.includes(guessChar.class)) {
+							letterColor = "Square/yellow_class.png"
+							boardColors[NUMBER_OF_GUESSES - guessesRemaining][i] = "y"
+						} else {
+							letterColor = "Square/red_class.png"
+							boardColors[NUMBER_OF_GUESSES - guessesRemaining][i] = "r"
+						}
 					}
 				}
 				
@@ -291,12 +478,12 @@
 					if (guessChar.level == rightChar.level) {
 						letterColor = "Square/green.png"
 						boardColors[NUMBER_OF_GUESSES - guessesRemaining][i] = "g"
-					} else if ((guessChar.level == rightChar.chapter && guessChar.chapter != rightChar.chapter) || (guessChar.level == rightChar.game && guessChar.game != rightChar.game)) {
-						letterColor = "Square/yellow.png"
-						boardColors[NUMBER_OF_GUESSES - guessesRemaining][i] = "y"
+					} else if (parseInt(guessChar.level) < rightChar.level) {
+						letterColor = "Square/up.png"
+						boardColors[NUMBER_OF_GUESSES - guessesRemaining][i] = "b"
 					} else {
-						letterColor = "Square/red.png"
-						boardColors[NUMBER_OF_GUESSES - guessesRemaining][i] = "r"
+						letterColor = "Square/down.png"
+						boardColors[NUMBER_OF_GUESSES - guessesRemaining][i] = "b"
 					}
 				}
 				
@@ -320,7 +507,24 @@
 						box.textContent = "" + guessChar.chapter
 					}
 					if (i == 2) {
+						let rightGuessClassTree = classTrees[classes.indexOf(rightChar.class)]
+						let guessClassTree = classTrees[classes.indexOf(guessChar.class)]
+						let tileColor = "Square/red_class.png"
+						
+						if (rightGuessClassTree.includes(guessChar.class) && letterColor != "Square/green_class.png") {
+							tileColor = "Square/yellow_class.png"
+						}
+						for (let i = 0; i < guessClassTree.length; i++) {
+							let tile = document.getElementById(guessClassTree[i])
+							if (tileColor == "Square/red_class.png" || (tile.style.backgroundImage != 'url("Square/red_class.png")' && tile.style.backgroundImage != 'url("Square/green_class.png")')) {
+								tile.style.backgroundImage = "url(" + tileColor + ")"
+							}
+						}
+						
 						let tile = document.getElementById(guessChar.class)
+						if (letterColor == "Square/yellow_class.png") {
+							letterColor = "Square/red_class.png"
+						}
 						tile.style.backgroundImage = "url(" + letterColor + ")"
 						let img = box.children[0]
 						img.src = "Class/" + guessChar.class + ".png"
@@ -344,7 +548,24 @@
 							box.textContent = "" + guessChar.chapter
 						}
 						if (i == 2) {
+							let rightGuessClassTree = classTrees[classes.indexOf(rightChar.class)]
+							let guessClassTree = classTrees[classes.indexOf(guessChar.class)]
+							let tileColor = "Square/red_class.png"
+							
+							if (rightGuessClassTree.includes(guessChar.class) && letterColor != "Square/green_class.png") {
+								tileColor = "Square/yellow_class.png"
+							}
+							for (let i = 0; i < guessClassTree.length; i++) {
+								let tile = document.getElementById(guessClassTree[i])
+								if (tileColor == "Square/red_class.png" || (tile.style.backgroundImage != 'url("Square/red_class.png")' && tile.style.backgroundImage != 'url("Square/green_class.png")')) {
+									tile.style.backgroundImage = "url(" + tileColor + ")"
+								}
+							}
+							
 							let tile = document.getElementById(guessChar.class)
+							if (letterColor == "Square/yellow_class.png") {
+								letterColor = "Square/red_class.png"
+							}
 							tile.style.backgroundImage = "url(" + letterColor + ")"
 							let img = box.children[0]
 							img.src = "Class/" + guessChar.class + ".png"
@@ -501,6 +722,8 @@
 						grid = grid + "🟨";
 					if (boardColors[i][j] == "r")
 						grid = grid + "🟥";
+					if (boardColors[i][j] == "b")
+						grid = grid + '\uD83D\uDFE6';
 				}
 				grid = grid + "\n"
 			}
@@ -517,6 +740,26 @@
 				let popup = document.getElementById("popup")
 				popup.style.display = "none";
 			},2000)
+		}
+		
+		function toUTF16(codePoint) {
+			var TEN_BITS = parseInt('1111111111', 2);
+			function u(codeUnit) {
+				return '\\u'+codeUnit.toString(16).toUpperCase();
+			}
+		
+			if (codePoint <= 0xFFFF) {
+				return u(codePoint);
+			}
+			codePoint -= 0x10000;
+
+			// Shift right to get to most significant 10 bits
+			var leadSurrogate = 0xD800 + (codePoint >> 10);
+
+			// Mask to get least significant 10 bits
+			var tailSurrogate = 0xDC00 + (codePoint & TEN_BITS);
+
+			return u(leadSurrogate) + u(tailSurrogate);
 		}
 		
 		function mulberry32(a) {
