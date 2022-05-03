@@ -331,8 +331,8 @@
 		var seed = xmur3(dateString)
 		var rand = mulberry32(seed())
 		
-		//let rightCharIndex = Math.floor(rand() * CHARS.length)
-		let rightCharIndex = Math.floor(Math.random() * CHARS.length)
+		let rightCharIndex = Math.floor(rand() * CHARS.length)
+		//let rightCharIndex = Math.floor(Math.random() * CHARS.length)
 		let rightChar = CHARS[rightCharIndex]
 		
 		var win = true
